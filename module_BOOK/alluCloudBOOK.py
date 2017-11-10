@@ -1,9 +1,5 @@
 #!/usr/bin/python
 
-'''
-REWRITING 2015 >>>
-'''
-
 import os
 import datetime
 import shutil
@@ -12,13 +8,7 @@ import ftplib
 from ftplib import FTP
 import MySQLdb
 import common.scripts.database_functions as database_functions
-import ConfigParser
 
-#Get variables from config file
-#TODO: move this config file crap to db
-import ConfigParser
-config = ConfigParser.ConfigParser()
-config.read("d:\\ALLUSTORE\\alluCloud\\alluCloud.conf")
 list_authors_acc_to_breathing_status = config.get('BOOK', 'listAuthorsAccToBreathingStatus')
 list_living_dead_unknown_authors = config.get('BOOK', 'listLivingDeadUnknownAuthors')
 FTPBookDir = config.get('BOOK', 'FTPBookDir')
@@ -40,15 +30,7 @@ db_password = ENVIRONMENT[2]
 default_table = ENVIRONMENT[3]
 
 ###Get Source Files
-### GOOD 2015
-def get_source_files_for_BOOK_module():
-    files = ["indexTemplate.html",
-             "indexAdvancedTemplate.html",
-             "ToReadList.txt"]
-    for file in files:
-        global_root_dir = (str(global_root_directory).lstrip("'(('")).rstrip("',),)")
-        path_to_source = global_root_dir + "\HTMLfiles\source\BOOK\\" + file
-        shutil.copyfile(path_to_source,file.replace("Template",""))
+    shutil.copyfile(index_template.html,file.replace("template",""))
 
 
 ###FTP

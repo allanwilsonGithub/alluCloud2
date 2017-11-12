@@ -7,9 +7,12 @@ import urllib2
 import ftplib
 from ftplib import FTP
 import MySQLdb
+import alluCloudUtils
 
 ### MYSQL
-LOCAL_ENV = ['localhost','root','neerg42','booksdb']
+MySQLPass = str(alluCloudUtils.get_MySQLPass())
+
+LOCAL_ENV = ['localhost','root',MySQLPass,'booksdb']
 ENVIRONMENT = LOCAL_ENV
 db_server = ENVIRONMENT[0]
 db_user = ENVIRONMENT[1]
@@ -84,7 +87,7 @@ def listAllInYear(yearValue):
 
 
 #Create Fresh Index.html
-shutil.copyfile("index_template.html","index.html")
+shutil.copyfile("module_BOOK/index_template.html","index.html")
 
 #Last Update
 f = open('index.html','r')
@@ -135,3 +138,6 @@ for yearX in includedYears:
     n.close()
     os.remove('index.html')
     os.rename('index_new.html','index.html')
+
+shutil.copyfile("index.html","module_BOOK/index.html",)
+os.remove('index.html')

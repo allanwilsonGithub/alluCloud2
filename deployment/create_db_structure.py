@@ -26,7 +26,7 @@ def execute_MySQL_command_table_level(db_server, db_user, db_password, database,
 ### CREATE EVENT STRUCTURE ###
 db_server = 'localhost'
 db_user = 'root'
-db_password = 'neerg42'
+db_password = 'alluCloud2'
 
 execute_MySQL_command_db_level(db_server, db_user, db_password, "DROP DATABASE IF EXISTS `eventdb1`;")
 execute_MySQL_command_db_level(db_server, db_user, db_password, "CREATE DATABASE eventdb1;")

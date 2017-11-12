@@ -12,7 +12,6 @@ from email.MIMEText import MIMEText
 import logging
 logging.basicConfig(filename="D:\\ALLUSTORE\\allucloud\\alluCloud2\\alluCloud.log",level=logging.DEBUG,format='%(asctime)s %(message)s')
 
-
 monthsToShow = 12
 sendEmail = 1
 
@@ -29,7 +28,7 @@ def send_mail(text):
    s.close()
 
 ### MYSQL
-LOCAL_ENV = ['localhost','root','neerg42','eventdb']
+LOCAL_ENV = ['localhost','root','alluCloud2','eventdb']
 ENVIRONMENT = LOCAL_ENV
 db_server = ENVIRONMENT[0]
 db_user = ENVIRONMENT[1]
@@ -96,7 +95,7 @@ def get_birth_year(name):
     return query
     
 def query_config_database(query):
-    db = MySQLdb.connect('localhost','root','neerg42','dashdb')
+    db = MySQLdb.connect('localhost','root','alluCloud2','dashdb')
     cursor = db.cursor()
     cursor.execute(query)
     result = cursor.fetchall()

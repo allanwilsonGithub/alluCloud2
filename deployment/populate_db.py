@@ -32,7 +32,7 @@ def insert_into_database(db_server, db_user, db_password, database, query,):
 ### CREATE EVENT STRUCTURE ###
 db_server = 'localhost'
 db_user = 'root'
-db_password = 'neerg42'
+db_password = 'alluCoud2'
 
 def get_input_string_from_backup(database_name,table_name):
     return_line = 0

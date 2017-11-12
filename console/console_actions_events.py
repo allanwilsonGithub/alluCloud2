@@ -9,7 +9,7 @@ import MySQLdb
 import subprocess
 
 ### MYSQL
-LOCAL_ENV = ['localhost','root','neerg42','eventdb']
+LOCAL_ENV = ['localhost','root','alluCloud2','eventdb']
 ENVIRONMENT = LOCAL_ENV
 db_server = ENVIRONMENT[0]
 db_user = ENVIRONMENT[1]

@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 
+import platform
 import sys
 import console_actions_events
 import console_actions_home_backup

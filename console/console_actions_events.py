@@ -38,14 +38,14 @@ def add_event():
     eventNameValue = raw_input("Name : ")
     
     #Get and verify date
-    print "Date format: 2017-08-16"
+    print "Date format: 2018-07-16"
     eventDateValue = raw_input("Date : ")
     date_pattern = re.compile("(^[2][0][1][6-9]\-[0-1][0-9]\-[0-3][0-9])")
     while date_pattern.match(eventDateValue) == None:
         print "Date was in the wrong format!"
         eventDateValue = raw_input("Date : ")
 
-    eventYearValue = raw_input("Year[press enter for 2017]:") or "2017"
+    eventYearValue = raw_input("Year[press enter for 2018]:") or "2018"
     eventRecurringValue = raw_input("Recurring (0 or 1) : ")
     eventCommentValue = raw_input("Comment : ")
     query = "INSERT INTO events (eventType,eventName,date,year,recurring,comment) VALUES(%s, '%s', '%s', %s, %s, '%s')" % (eventTypeValue,eventNameValue,eventDateValue,eventYearValue,eventRecurringValue,eventCommentValue)

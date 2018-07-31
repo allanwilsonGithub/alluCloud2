@@ -6,4 +6,4 @@ module_HOME_BACKUP\alluCloud2_HOME_BACKUP_runner.py
 
 deployment\backup_db.py
 
-D:\ALLUSTORE\allucloud\alluCloud2\web_ready_files\eventIndex.html
+web_ready_files\eventIndex.html

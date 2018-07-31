@@ -105,7 +105,7 @@ def zip_the_dirs(create_zip_list):
     for dir in create_zip_list:
         newRarName = local_zip_dir + dir.rpartition("\\")[2] + ".rar"
         dirToCopy = dir + "//*.*"
-        cmd = '"C://Program Files//WinRAR//WinRAR.exe" a -pneerg42neerg42 -r -t \"%s\" \"%s\"' % (newRarName,dirToCopy)
+        cmd = '"C://Program Files//WinRAR//WinRAR.exe" a -palluCloud2alluCloud2 -r -t \"%s\" \"%s\"' % (newRarName,dirToCopy)
         subprocess.call(cmd)
 
 

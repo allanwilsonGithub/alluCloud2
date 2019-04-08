@@ -5,6 +5,9 @@ import sys
 import console_actions_events
 import console_actions_home_backup
 import console_actions_sikuli
+import console_actions_display_remote_time
+import console_actions_play_random_track
+
 import Tkinter
 from Tkinter import *
 
@@ -12,6 +15,10 @@ class App:
 
     def __init__(self, master):
         frame = Frame(master)
+
+        Label(frame, text="Play Random MP3", width=50).pack(side=TOP)
+        self.action30 = Button(frame, text="Play Track", fg="SeaGreen", command=self.action30)
+        self.action30.pack(side=TOP)
 
         Label(frame, text="Events", width=50).pack(side=TOP)
         self.action1 = Button(frame, text="Add Event", fg="SeaGreen", command=self.action1)
@@ -32,6 +39,8 @@ class App:
         self.action22.pack(side=TOP)
         self.action22 = Button(frame, text="Own website", fg="#cc33ff", command=self.action7)
         self.action22.pack(side=TOP)
+        self.action23 = Button(frame, text="Get Time in Country..;", fg="#cc33ff", command=self.action8)
+        self.action23.pack(side=TOP)
 
         Label(frame, text="-------------").pack(side=TOP)
         self.button = Button(frame, text="Quit", fg="red", command=frame.quit)
@@ -60,9 +69,16 @@ class App:
     def action7(self):
         console_actions_sikuli.open_allan_wilson_net()
 
+    def action8(self):
+        console_actions_display_remote_time.get_time()
+
+    def action30(self):
+        console_actions_play_random_track.play_random_mp3()
+
 
 root = Tk()
 root.title("AlluCloud2")
+root.geometry("640x480+20+60")
 
 app = App(root)
  

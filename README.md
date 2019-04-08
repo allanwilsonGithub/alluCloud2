@@ -1,5 +1,34 @@
 # alluCloud2
-AlluCloud project from 2019 onwards
+AlluCloud project from Apr 2019 onwards
+
+# Functions
+#### Console
+Make a shortcut to GUIMenu.py on desktop
+
+Play Random Track : Plays random music track from local collection
+
+Add Event : Adds an entry to EVENT module
+
+Delete USB HDD and copy everything again : copy all local ZIP backup files to USB
+ 
+Delete QNAP HDD and copy everything again : copy all local ZIP backup files to QNAP box
+
+## Home Backup
+Creates a directory of ZIP files on the local disk
+
+Only recreates a zip file when files change
+
+Use GUI to copy these files to either USB HDD or QNAP
+
+## Event Module
+
+Database of birthdays, tasks, reminders
+
+Email is sent every day with ordered list of upcoming events
+
+Formatted webpage is also generated locally
+
+## DEPLOYMENT
 
 Full deployment to fresh Windows7 host (physical or VM)
 1. Install Win7

@@ -30,18 +30,6 @@ class App:
         self.action11 = Button(frame, text="Delete QNAP HDD and copy everything again", fg="SeaGreen", command=self.action3)
         self.action11.pack(side=TOP)
 
-        Label(frame, text="Open With Sikuli", width=50).pack(side=TOP)
-        self.action20 = Button(frame, text="Facebook", fg="SeaGreen", command=self.action4)
-        self.action20.pack(side=TOP)
-        self.action21 = Button(frame, text="Workflowy", fg="SeaGreen", command=self.action5)
-        self.action21.pack(side=TOP)
-        self.action22 = Button(frame, text="Freecodecamp", fg="SeaGreen", command=self.action6)
-        self.action22.pack(side=TOP)
-        self.action22 = Button(frame, text="Own website", fg="#cc33ff", command=self.action7)
-        self.action22.pack(side=TOP)
-        self.action23 = Button(frame, text="Get Time in Country..;", fg="#cc33ff", command=self.action8)
-        self.action23.pack(side=TOP)
-
         Label(frame, text="-------------").pack(side=TOP)
         self.button = Button(frame, text="Quit", fg="red", command=frame.quit)
         self.button.pack()
@@ -56,21 +44,6 @@ class App:
 
     def action3(self):
         console_actions_home_backup.delete_backup_and_recopy_to_QNAP_HDD()
-
-    def action4(self):
-        console_actions_sikuli.open_facebook()
-
-    def action5(self):
-        console_actions_sikuli.open_workflowy()
-
-    def action6(self):
-        console_actions_sikuli.open_freecodecamp()
-
-    def action7(self):
-        console_actions_sikuli.open_allan_wilson_net()
-
-    def action8(self):
-        console_actions_display_remote_time.get_time()
 
     def action30(self):
         console_actions_play_random_track.play_random_mp3()
